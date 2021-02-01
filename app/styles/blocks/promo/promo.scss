@@ -1,0 +1,153 @@
+.promo {
+	margin-top: 120px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	&__content {
+		max-width: 400px;
+	}
+	&__subtitle {
+		padding-bottom: 35px;
+	}
+	&__title {
+		font-size: 42px;
+		line-height: 50.4px;
+		padding-bottom: 23px;
+	}
+	&__descr {
+		@include descr-18px;
+		padding-bottom: 14px;
+	}
+	&__download-btn {
+		width: 167px;
+		height: 120px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&__elem {
+			:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 42px;
+				background: rgba(255, 255, 255, 0.3);
+				border-radius: 5px;
+				transition: all 2s ease;
+				&:hover {
+					width: 100%;
+				}
+			}
+			&:hover {
+				animation: bounce 1s;
+			}
+		}
+	}
+}
+.img_inner {
+	display: none;
+}
+
+@keyframes bounce {
+	0%,
+	20%,
+	60%,
+	100% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+@media (max-width: 992px) {
+	.wrapper {
+		max-width: 800px;
+	}
+	.promo {
+		&__title {
+			font-size: 39px;
+			line-height: 40.4px;
+			margin-bottom: 15px;
+		}
+		&__img img {
+			max-width: 300px;
+		}
+		&__download-btn {
+			justify-self: center;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.wrapper {
+		max-width: 700px;
+	}
+	.img_outer {
+		display: none;
+	}
+	.img_inner {
+		display: block;
+	}
+	.promo {
+		flex-direction: column;
+		align-items: center;
+		margin-top: 100px;
+		&__content {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&__img img {
+			max-width: 400px;
+		}
+		&__download-btn {
+			width: 400px;
+			flex-direction: row;
+			height: 100%;
+		}
+		&__content {
+			max-width: 100%;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.wrapper {
+		max-width: 420px;
+	}
+	.promo {
+		margin: 100px 0 60px;
+		flex-direction: column;
+		align-items: center;
+		&__subtitle {
+			padding-bottom: 15px;
+		}
+		&__title {
+			font-size: 32px;
+			line-height: 35.4px;
+			padding-bottom: 5px;
+		}
+		&__img img {
+			width: 250px;
+		}
+
+		&__content {
+			max-width: 350px;
+		}
+		&__download-btn {
+			max-width: 300px;
+			& img {
+				width: 145px;
+			}
+		}
+	}
+}

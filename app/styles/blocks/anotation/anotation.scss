@@ -1,0 +1,30 @@
+.anotation {
+	display: grid;
+	grid-template: repeat(2, auto) / 1fr 250px;
+	margin-bottom: 70px;
+	padding: 0 40px;
+	row-gap: 25px;
+	&__certificat {
+		grid-column-start: 2;
+		grid-row: 1 / 3;
+	}
+	&__text {
+		// max-width: 836px;
+		color: #aaaaaa;
+		font-size: 12px;
+		line-height: 15.6px;
+		grid-column: 1 / 2;
+	}
+	&__certificat {
+		justify-self: end;
+		align-self: center;
+	}
+}
+
+@media (max-width: 576px) {
+	.anotation {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+}

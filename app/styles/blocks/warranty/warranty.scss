@@ -1,0 +1,58 @@
+.warranty {
+	margin: 110px 0 100px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	&__img {
+		width: 100%;
+	}
+	&__text-content {
+		margin-bottom: 112px;
+		max-width: 400px;
+		@include descr-18px;
+	}
+	&__title {
+		margin-bottom: 22px;
+		@include title-36px;
+	}
+	&__descr p {
+		margin-bottom: 12px;
+	}
+}
+@media (max-width: 992px) {
+	.warranty {
+		&__img img {
+			max-width: 300px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.warranty {
+		margin-bottom: 80px;
+		& img {
+			max-width: 400px;
+			padding-bottom: 20px;
+		}
+		&__text-content {
+			align-items: center;
+			text-align: center;
+			max-width: 100%;
+			margin-bottom: 0;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.warranty {
+    justify-content: center;
+		& img {
+			width: 250px;
+		}
+		&__title {
+			@include title-32px;
+		}
+		&__descr {
+      max-width: 310px;
+		}
+	}
+}

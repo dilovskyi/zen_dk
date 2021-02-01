@@ -1,0 +1,34 @@
+@import "libs/bootstrap-reboot.min";
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
+
+@import "base/variables";
+@import "base/mixins";
+
+* {
+	font-family: Nunito;
+	color: #222222;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	max-width: 1230px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+@import "blocks/hamburger/hamburger.scss";
+@import "blocks/aside-menu/aside-menu.scss";
+
+@import "blocks/header/header.scss";
+@import "blocks/promo/promo.scss";
+@import "blocks/warranty/warranty.scss";
+@import "blocks/care/care.scss";
+@import "blocks/cashback/cashback.scss";
+@import "blocks/shopping/shopping.scss";
+@import "blocks/no-fees/no-fees.scss";
+@import "blocks/app/app.scss";
+@import "blocks/account/account.scss";
+@import "blocks/footer/footer.scss";
+@import "blocks/anotation/anotation.scss";
+@import "blocks/logos/logos.scss";

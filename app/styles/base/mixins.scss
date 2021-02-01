@@ -1,0 +1,60 @@
+@mixin before_circle {
+	&:before {
+		content: "";
+		width: 36px;
+		height: 36px;
+		background: $main-color;
+		position: absolute;
+		border-radius: 100%;
+		z-index: -1;
+		top: -25%;
+		left: 0px;
+	}
+}
+
+@mixin title-36px {
+	font-size: 36px;
+  line-height: 35.4px;
+	font-weight: 700;
+}
+
+@mixin title-32px {
+  font-size: 32px;
+	line-height: 43.2px;
+	font-weight: 700;
+}
+
+@mixin descr-18px {
+	font-size: 16px;
+	line-height: 25.92px;
+	font-weight: 300;
+}
+
+@mixin descr-14px {
+	font-size: 14px;
+	line-height: 22.92px;
+	font-weight: 300;
+}
+
+@mixin blue-btn {
+	transform: translateY(-11px);
+	display: block;
+	border-radius: 20px;
+	background-image: linear-gradient(to right, #9eefe1 0%, #4830f0 51%, #9eefe1 100%);
+	background-size: 200% auto;
+	transition: 0.5s;
+	&:hover {
+		box-shadow: 0 0 40px rgba(25, 67, 114, 0.8);
+		background-position: right center;
+	}
+}
+
+@mixin btn-shadow {
+	box-shadow: 0 0 40px rgb(25 67 114 / 80%);
+}
+
+@mixin space-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
