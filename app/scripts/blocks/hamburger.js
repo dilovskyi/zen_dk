@@ -10,17 +10,18 @@ function hamburger() {
 	function showMenu() {
 		hamburgerWrap.classList.add("close");
 		hamburgerWrap.classList.remove("activ");
-		menu.classList.add("show");
-		menu.classList.remove("hide");
+		menu.classList.add("visible");
+		menu.classList.remove("hidden");
 	}
 	function hideMenu() {
 		hamburgerWrap.classList.add("activ");
 		hamburgerWrap.classList.remove("close");
-		menu.classList.remove("show");
-		menu.classList.add("hide");
+		menu.classList.remove("visible");
+    menu.classList.add("hidden");
+    menu.style.display = "flex";
 	}
 
-	setTimeout(() => hideMenu(), 200);
+	hideMenu();
 
 	function rotated(stick, deg, pos) {
 		stick.style.cssText = `
@@ -39,7 +40,7 @@ function hamburger() {
 
 	function closeBtn(e) {
 		if (hamburgerWrap.matches(".activ")) {
-      body.style.overflow = "hidden";
+			body.style.overflow = "hidden";
 			showMenu();
 			setTimeout(() => {
 				midleStick.style.display = "none";
@@ -47,15 +48,14 @@ function hamburger() {
 				rotated(bottomStick, 45, "absolute");
 			}, 200);
 		} else if (hamburgerWrap.matches(".close")) {
-    body.style.overflow = "";
-git
+			body.style.overflow = "";
 			setTimeout(() => {
 				hideMenu();
 				midleStick.style.display = "block";
 			}, 300);
 			rotated(topStick, 0, "unset");
 			rotated(bottomStick, 0, "unset");
-    }
+		}
 	}
 }
 export { hamburger };

@@ -1,7 +1,7 @@
 .aside-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: none;
+	align-items: center;
+	justify-content: center;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -9,8 +9,8 @@
 	width: 100%;
 	transition: 1s;
 	background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
-  z-index: 1;
+	backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+	z-index: 1;
 	&__list {
 		min-height: 400px;
 		display: flex;
@@ -36,10 +36,10 @@
 		@include blue-btn;
 		padding: 10px 40px;
 	}
-	&.activ {
+	&.visible {
 		transform: translateX(0);
 	}
-	&.hide {
+	&.hidden {
 		transform: translateX(-100%);
 	}
 }
