@@ -17,8 +17,8 @@ function hamburger() {
 		hamburgerWrap.classList.add("activ");
 		hamburgerWrap.classList.remove("close");
 		menu.classList.remove("visible");
-    menu.classList.add("hidden");
-    menu.style.display = "flex";
+		menu.classList.add("hidden");
+		menu.style.display = "flex";
 	}
 
 	hideMenu();
@@ -57,5 +57,6 @@ function hamburger() {
 			rotated(bottomStick, 0, "unset");
 		}
 	}
+	console.log("qq");
 }
-export { hamburger };
+export default hamburger;
